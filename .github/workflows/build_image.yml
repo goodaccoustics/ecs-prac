@@ -26,7 +26,7 @@ jobs:
       - uses: unfor19/install-aws-cli-action@v1
 
       - name: Build image
-        run: docker build -t 255945442255.dkr.ecr.us-east-1.amazonaws.com/justinlim-ecr-repo:latest .
+        run: docker build -t 255945442255.dkr.ecr.us-east-1.amazonaws.com/justinlim-personal-ecr-repo:latest .
 
       - name: Test AWS Version
         run: aws --version
