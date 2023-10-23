@@ -26,7 +26,7 @@ jobs:
       - uses: unfor19/install-aws-cli-action@v1
 
       - name: Build image
-        run: docker build -t 255945442255.dkr.ecr.us-east-1.amazonaws.com/justinlim-personal-ecr-repo:latest .
+        run: docker build -t 255945442255.dkr.ecr.us-east-1.amazonaws.com/justinlim-terraform-ecr-3.5:latest .
 
       - name: Test AWS Version
         run: aws --version
@@ -39,4 +39,4 @@ jobs:
         run: aws ecr get-login-password --region "us-east-1" | docker login --username AWS --password-stdin 255945442255.dkr.ecr.us-east-1.amazonaws.com/justinlim-terraform-ecr-3.5
 
       - name: Push Image to ECR  
-        run: docker push 255945442255.dkr.ecr.us-east-1.amazonaws.com/justinlim-personal-ecr-repo:latest
+        run: docker push 255945442255.dkr.ecr.us-east-1.amazonaws.com/justinlim-terraform-ecr-3.5:latest
