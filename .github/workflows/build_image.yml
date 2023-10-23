@@ -36,7 +36,7 @@ jobs:
 
       # check if log outputs violate confidentiality
       - name: Connect to ECR
-        run: aws ecr get-login-password --region "us-east-1" | docker login --username AWS --password-stdin 255945442255.dkr.ecr.us-east-1.amazonaws.com/justinlim-ecr-repo
+        run: aws ecr get-login-password --region "us-east-1" | docker login --username AWS --password-stdin 255945442255.dkr.ecr.us-east-1.amazonaws.com/justinlim-terraform-ecr-3.5
 
       - name: Push Image to ECR  
         run: docker push 255945442255.dkr.ecr.us-east-1.amazonaws.com/justinlim-personal-ecr-repo:latest
